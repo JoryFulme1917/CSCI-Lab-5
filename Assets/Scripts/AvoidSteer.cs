@@ -11,6 +11,7 @@ public class AvoidSteer : MonoBehaviour {
 
 	private bool tagged;
 	private Rigidbody2D body;
+	public GameObject blood;
 
 	// Use this for initialization
 	void Start () {
@@ -39,6 +40,10 @@ public class AvoidSteer : MonoBehaviour {
 			shark.GetComponent<FollowSteer>().IncreaseSpeed();
 			minDist += 2;
 			tagged = true;
+			GameManager.Instance.IncScore(1);
+			Instantiate(blood, coll.gameObject.transform.position, Quaternion.identity);
+			coll.gameObject.GetComponent<AudioSource>().Play();
+			Destroy(gameObject);
 		}
 
 	}

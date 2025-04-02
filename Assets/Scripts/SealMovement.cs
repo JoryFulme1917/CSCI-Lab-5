@@ -11,6 +11,7 @@ public class SealMovement : MonoBehaviour {
 	private float horizontal;
 	private float vertical;
 	private Rigidbody2D body;
+	public GameObject blood;
 
 	// Use this for initialization
 	void Start () {
@@ -33,6 +34,8 @@ public class SealMovement : MonoBehaviour {
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject == target) {
 			Destroy(coll.gameObject);
+			GameManager.Instance.IncScore(1);
+			Instantiate(blood, coll.gameObject.transform.position, Quaternion.identity);
 			GetComponent<AudioSource>().Play();
 		}
 	}
