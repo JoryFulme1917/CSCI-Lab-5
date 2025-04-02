@@ -8,10 +8,12 @@ public class AvoidSteer : MonoBehaviour {
 	public GameObject target;
 	public GameObject shark;
 	public static float minDist;
+	public Animator animator;
 
 	private bool tagged;
 	private Rigidbody2D body;
 	public GameObject blood;
+	private float currentSpeed;
 
 	// Use this for initialization
 	void Start () {
@@ -23,13 +25,16 @@ public class AvoidSteer : MonoBehaviour {
 
 		if (target) {
 			Vector2 desired = target.transform.position - transform.position;
+			
 
 			if (desired.magnitude < minDist) {
 				print("avoiding seal");
 				float actual = desired.magnitude - minDist;
 				body.AddForce(desired.normalized *
 					actual * speed - body.linearVelocity);
+				currentSpeed = actual * speed;
 			}
+			animator.SetFloat("Speed", Mathf.Abs(currentSpeed));
 		}
 
 	}

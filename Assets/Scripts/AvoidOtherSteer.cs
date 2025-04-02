@@ -11,6 +11,8 @@ public class AvoidOtherSteer : MonoBehaviour {
 
 	private Rigidbody2D body;
 
+	
+
 	// Use this for initialization
 	void Start () {
 		body = GetComponent<Rigidbody2D>();
@@ -31,6 +33,7 @@ public class AvoidOtherSteer : MonoBehaviour {
 				}
 				body.AddForce(desired.normalized *
 					actual * speed - body.linearVelocity);
+				
 			}
 		}
 
