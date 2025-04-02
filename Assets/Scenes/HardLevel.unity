@@ -48466,7 +48466,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   target: {fileID: 1398449175}
-  speed: 0.2
+  speed: 1.2
   rotationSpeed: 2
 --- !u!212 &664630382
 SpriteRenderer:
@@ -51556,7 +51556,7 @@ MonoBehaviour:
   seal: {fileID: 1398449175}
   shark: {fileID: 664630378}
   blood: {fileID: 3643895400747555434, guid: e350a7760715f6a43ab44918937b3ba4, type: 3}
-  numFish: 2
+  numFish: 15
   scale: 1
   FishText: {fileID: 1065958488}
 --- !u!4 &1559129104
@@ -51681,8 +51681,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 1398449175}
-  boundaryPercent: 0.3
-  easing: 0.001
+  boundaryPercent: 0.5
+  easing: 0.01
 --- !u!114 &2120793617
 MonoBehaviour:
   m_ObjectHideFlags: 0

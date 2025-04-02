@@ -51556,7 +51556,7 @@ MonoBehaviour:
   seal: {fileID: 1398449175}
   shark: {fileID: 664630378}
   blood: {fileID: 3643895400747555434, guid: e350a7760715f6a43ab44918937b3ba4, type: 3}
-  numFish: 2
+  numFish: 5
   scale: 1
   FishText: {fileID: 1065958488}
 --- !u!4 &1559129104
