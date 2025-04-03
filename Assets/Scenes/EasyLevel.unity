@@ -48424,8 +48424,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_Size: {x: 0.98, y: 1.14}
+  m_Offset: {x: -0.033911, y: -0.0034069896}
+  m_Size: {x: 0.09562772, y: 0.16172297}
   m_Direction: 0
 --- !u!50 &664630380
 Rigidbody2D:
@@ -48515,7 +48515,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 8861480726252175340, guid: 3ce70b09c485fdd42b3f3127c7b539e5, type: 3}
+  m_Sprite: {fileID: -5753059612143045158, guid: d7f7791344e98344fa2b8d09363e4f6a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -48535,7 +48535,7 @@ Transform:
   m_GameObject: {fileID: 664630378}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 2.48, y: 10.6, z: 0}
+  m_LocalPosition: {x: 2.181, y: 10.722, z: 0}
   m_LocalScale: {x: 10, y: 10, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -48562,7 +48562,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.72732115
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0
@@ -51205,8 +51205,8 @@ CapsuleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0.009942691, y: -0.013082227}
-  m_Size: {x: 0.4682312, y: 0.4682312}
+  m_Offset: {x: 0.09109696, y: -0.021624804}
+  m_Size: {x: 0.3059227, y: 0.30592275}
   m_Direction: 0
 --- !u!50 &1398449177
 Rigidbody2D:
@@ -51247,7 +51247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b55128388aab5134ba470467fff59fe8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 6119614772588658774, guid: b180d62801d289a459c3a085631277d4, type: 3}
   runSpeed: 3
   rotateSpeed: 3
   blood: {fileID: 3643895400747555434, guid: e350a7760715f6a43ab44918937b3ba4, type: 3}

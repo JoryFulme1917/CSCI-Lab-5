@@ -21,8 +21,14 @@ public class FollowSteer : MonoBehaviour {
 	void FixedUpdate () {
 		Vector2 desired = (target.transform.position - transform.position).normalized;
 		body.AddForce(desired * speed - body.linearVelocity);
+		if(Mathf.Abs(body.linearVelocity.x) > 0){
+			animator.SetFloat("Swim", Mathf.Abs(body.linearVelocity.x));
+		}
+		else{
+			animator.SetFloat("Swim", Mathf.Abs(body.linearVelocity.y));
+		}
 
-		float angle = (Mathf.Atan2(desired.y, desired.x) * Mathf.Rad2Deg) - 90;
+		float angle = (Mathf.Atan2(desired.y, desired.x) * Mathf.Rad2Deg);
 		Quaternion q = Quaternion.AngleAxis(angle, Vector3.forward);
 		transform.rotation = Quaternion.Slerp(transform.rotation,
 			q, Time.deltaTime * rotationSpeed);
@@ -40,8 +46,15 @@ public class FollowSteer : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
+		animator.SetBool("Eat", true);
 		if (coll.gameObject == target) {
 			GetComponent<AudioSource>().Play();
 		}
+		Invoke("DoneEat", 1);
+		Initiate.Fade("Death Screen", Color.red, 1.0f);
+	}
+
+	void DoneEat(){
+		animator.SetBool("Eat", false);
 	}
 }

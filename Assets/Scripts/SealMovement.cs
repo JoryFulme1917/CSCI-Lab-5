@@ -37,9 +37,8 @@ public class SealMovement : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
-		animator.SetBool("eating", true);
-		if (coll.gameObject == target) {
-			
+		if (coll.gameObject.tag == "fish") {
+			animator.SetBool("eating", true);
 			Destroy(coll.gameObject);
 			GameManager.Instance.IncScore(1);
 			Instantiate(blood, coll.gameObject.transform.position, Quaternion.identity);

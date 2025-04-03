@@ -26,6 +26,10 @@ public class GameManager : MonoBehaviour {
     public void IncScore(int ds) {
         FishEaten += ds;
         FishText.text = "Fish Eaten: " + FishEaten;
+        if(FishEaten == 10){
+            Initiate.Fade("Win Screen", Color.green, 1.0f);
+        }
+
     }
 
     void Start() {
