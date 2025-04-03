@@ -13,6 +13,9 @@ public class SealMovement : MonoBehaviour {
 	private Rigidbody2D body;
 	public GameObject blood;
 
+	public Animator animator;
+	private float currentSpeed;
+
 	// Use this for initialization
 	void Start () {
 		body = GetComponent<Rigidbody2D>();
@@ -28,15 +31,22 @@ public class SealMovement : MonoBehaviour {
 	private void FixedUpdate()
 	{
 		body.AddForce(transform.up * vertical * runSpeed);
+		currentSpeed = vertical * runSpeed;
+		animator.SetFloat("swimming", Mathf.Abs(currentSpeed));
 		transform.Rotate(Vector3.back * horizontal * rotateSpeed);
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
 		if (coll.gameObject == target) {
+			animator.SetBool("eating", true);
 			Destroy(coll.gameObject);
 			GameManager.Instance.IncScore(1);
 			Instantiate(blood, coll.gameObject.transform.position, Quaternion.identity);
 			GetComponent<AudioSource>().Play();
+			Invoke("stopEating", 100);
 		}
+	}
+	void stopEating(){
+		animator.SetBool("eating", false);
 	}
 }

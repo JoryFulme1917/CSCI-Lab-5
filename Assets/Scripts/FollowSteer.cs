@@ -8,7 +8,7 @@ public class FollowSteer : MonoBehaviour {
 	public float speed;
 	public float rotationSpeed;
 
-	private Rigidbody2D body;
+	public Rigidbody2D body;
 
 	// Use this for initialization
 	void Start () {
