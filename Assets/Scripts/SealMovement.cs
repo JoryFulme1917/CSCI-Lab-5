@@ -30,7 +30,7 @@ public class SealMovement : MonoBehaviour {
 
 	private void FixedUpdate()
 	{
-		body.AddForce(transform.up * vertical * runSpeed);
+		body.AddForce(transform.right * vertical * runSpeed);
 		currentSpeed = vertical * runSpeed;
 		animator.SetFloat("swimming", Mathf.Abs(currentSpeed));
 		transform.Rotate(Vector3.back * horizontal * rotateSpeed);

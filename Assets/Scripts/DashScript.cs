@@ -23,7 +23,7 @@ public class PlayerDash : MonoBehaviour
         }
  
         // Get the facing direction of the seal (transform.up is the forward-facing direction)
-        dashDirection = transform.up;  // This is the direction the seal is facing based on its rotation
+        dashDirection = transform.right;  // This is the direction the seal is facing based on its rotation
     }
  
     private IEnumerator Dash()

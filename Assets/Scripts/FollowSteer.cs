@@ -10,6 +10,8 @@ public class FollowSteer : MonoBehaviour {
 
 	public Rigidbody2D body;
 
+	public Animator animator;
+
 	// Use this for initialization
 	void Start () {
 		body = GetComponent<Rigidbody2D>();
