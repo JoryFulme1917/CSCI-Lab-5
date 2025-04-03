@@ -37,14 +37,16 @@ public class SealMovement : MonoBehaviour {
 	}
 
 	void OnCollisionEnter2D(Collision2D coll) {
+		animator.SetBool("eating", true);
 		if (coll.gameObject == target) {
-			animator.SetBool("eating", true);
+			
 			Destroy(coll.gameObject);
 			GameManager.Instance.IncScore(1);
 			Instantiate(blood, coll.gameObject.transform.position, Quaternion.identity);
 			GetComponent<AudioSource>().Play();
-			Invoke("stopEating", 100);
+			
 		}
+		Invoke("stopEating", 1);
 	}
 	void stopEating(){
 		animator.SetBool("eating", false);
