@@ -49,9 +49,9 @@ public class FollowSteer : MonoBehaviour {
 		animator.SetBool("Eat", true);
 		if (coll.gameObject == target) {
 			GetComponent<AudioSource>().Play();
+			Initiate.Fade("Death Screen", Color.red, 1.0f);
+			Invoke("DoneEat", 1);
 		}
-		Invoke("DoneEat", 1);
-		Initiate.Fade("Death Screen", Color.red, 1.0f);
 	}
 
 	void DoneEat(){

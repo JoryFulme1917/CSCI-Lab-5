@@ -106,8 +106,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b3d23dab08b7b294c9510c379b940a47, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 0.5
-  minDist: 0.5
+  speed: 0.02
+  minDist: 1.5
   target: {fileID: 0}
   shark: {fileID: 0}
 --- !u!114 &3722041450330113135

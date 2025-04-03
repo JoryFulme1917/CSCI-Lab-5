@@ -1,5 +1,6 @@
 using TMPro;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
 
@@ -18,9 +19,24 @@ public class GameManager : MonoBehaviour {
         if (Instance == null) {
             Instance = this;
             DontDestroyOnLoad(gameObject);
+            SceneManager.sceneLoaded += OnSceneLoaded;
         } else {
             Destroy(gameObject);
         }
+    }
+
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode) {
+        FishText = GameObject.Find("FishEaten")?.GetComponent<TextMeshProUGUI>();
+        ResetGame();
+    }
+
+    void ResetGame() {
+        FishEaten = 0;
+        if (FishText != null) {
+            FishText.text = "Fish Eaten: " + FishEaten;
+        }
+
+        SpawnFish();
     }
 
     public void IncScore(int ds) {
@@ -32,7 +48,7 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    void Start() {
+    void SpawnFish() {
         for (int i = 0; i < numFish; i++)
 		{
 			GameObject fish = (GameObject)Instantiate(fishBot,

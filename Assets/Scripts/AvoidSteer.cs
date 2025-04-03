@@ -45,7 +45,6 @@ public class AvoidSteer : MonoBehaviour {
 			shark.GetComponent<FollowSteer>().IncreaseSpeed();
 			minDist += 2;
 			tagged = true;
-			GameManager.Instance.IncScore(1);
 			Instantiate(blood, coll.gameObject.transform.position, Quaternion.identity);
 			coll.gameObject.GetComponent<AudioSource>().Play();
 			Destroy(gameObject);
