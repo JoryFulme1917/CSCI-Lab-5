@@ -48890,7 +48890,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34b4f513d62a41d4b85449ec46802612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  target: {fileID: 0}
+  target: {fileID: 586142554}
   speed: 0.8
   rotationSpeed: 2
   body: {fileID: 0}
@@ -51578,7 +51578,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fishBot: {fileID: 6119614772588658774, guid: b180d62801d289a459c3a085631277d4, type: 3}
-  seal: {fileID: 0}
+  seal: {fileID: 586142554}
   shark: {fileID: 664630378}
   blood: {fileID: 3643895400747555434, guid: e350a7760715f6a43ab44918937b3ba4, type: 3}
   numFish: 15
@@ -51706,7 +51706,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a23525ed98513614a94ee16dd6c5b439, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 586142554}
   boundaryPercent: 0.5
   easing: 0.01
 --- !u!114 &2120793617
